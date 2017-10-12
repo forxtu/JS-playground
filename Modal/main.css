@@ -1,0 +1,41 @@
+#modal__overflow{
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  display: none;
+  overflow: auto;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, .8);
+}
+.modal__content{
+  z-index: 8;
+
+  width: 80%;
+  margin: 15% auto;
+  padding: 20px;
+
+  cursor: auto;
+
+  border: 1px solid #c3c3c3;
+  background-color: #cecece;
+}
+.modal__header{
+  display: flex;
+
+  justify-content: space-between;
+}
+.modal__header h3{
+  margin: 0;
+}
+.modal__close{
+  float: right;
+
+  cursor: pointer;
+}

@@ -1,6 +1,14 @@
+var outputWrap = document.querySelector(".output__wrap");
+outputWrap.style.display = "none";
 document.getElementById("usdInput").addEventListener("input", function (e) {
+  if (e.target.value.length == 0) {
+    outputWrap.style.display = "none";
+  } else {
+    outputWrap.style.display = "block";
+  }
+  
   var usdValue = e.target.value;
-
+  
   var plnOutput = document.getElementById("plnOutput");
   plnOutput.innerHTML = parseInt((usdValue * 3.66) * 100) / 100;
 

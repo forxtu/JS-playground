@@ -1,0 +1,31 @@
+body{
+  margin-top: 70px;
+}
+#usdInput{
+  margin: 15px 0;
+  width: 300px;
+  border: 1px solid #cecece;
+  padding: 10px;
+}
+.output__wrap{
+  background: #FCFCFC;
+  padding: 20px;
+  margin: 0 auto;
+  width: 300px;
+  box-shadow: 0 0 30px #d1d1d1;
+}
+.output__pln,
+.output__uah,
+.output__rub{
+  padding: 10px;
+  position: relative;
+}
+.output__title{
+  margin-right: 5px;
+  color: #333;
+  font-weight: 700;
+}
+.output__value{
+  color: #5D0FEE;
+  font-weight: 600;
+}

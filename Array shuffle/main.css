@@ -1,0 +1,9 @@
+.start-btn{
+  margin: 30px;
+}
+.start-btn--link{
+  padding: 10px;
+  color: #fff;
+  background-color: darkgreen;
+  text-decoration: none;
+}

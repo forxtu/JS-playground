@@ -20,6 +20,21 @@ user2 = Object.create(Person).constructor('Hanna', 23, 'female');
 user.greet();
 user2.greet();
 
+/* extends object */
+var developer = Object.create(Person);
+developer.constructor = function(name, age, sex, skills) {
+    Person.constructor.apply(this, arguments);
+    this.skills = skills;
+    return this;
+}
+var webDeveloper = Object.create(developer).constructor('Web dev Den', 24, 'male', ['html', 'css', 'js']);
+console.log(webDeveloper.skills);
+webDeveloper.develop = function() {
+    console.log('Work!');
+}
+webDeveloper.develop();
+
+
 /* es5 function constructor */
 var Person2 = function(name, age, sex) {
     this.name = name;
@@ -27,7 +42,7 @@ var Person2 = function(name, age, sex) {
     this.sex = sex;
 
     this.greet2 = function() {
-        console.log(this.name + ' ' + this.age + ' ' + this.sex);
+        // console.log(this.name + ' ' + this.age + ' ' + this.sex);
     }
 }
 
@@ -46,7 +61,7 @@ class Person3 {
     }
 
     greet3() {
-        console.log(this.name + ' ' + this.age + ' ' + this.sex);
+        // console.log(this.name + ' ' + this.age + ' ' + this.sex);
     }
 }
 
